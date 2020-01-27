@@ -3,9 +3,8 @@
   become: yes
   hosts: all
   tasks:
-
- - name: test
-   apt:
-    name: apache2
-    update_cache: yes
-    state: present
+      - name: test
+        apt:
+         name: apache2
+         update_cache: yes
+         state: present
