@@ -1,0 +1,6 @@
+---
+- name: Add the user 'charles' with a specific uid'
+  user:
+    name: charles
+    comment: charles babbage
+    uid: 101
