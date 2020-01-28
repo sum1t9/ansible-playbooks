@@ -20,7 +20,7 @@
 
    - name: Deploy SSH Key
      authorized_key: user=charles
-                     key="{{ lookup('file', '/home/charles/.ssh/id_rsa.pub') }}"
+                     key="{{ lookup('file', '/home/ubuntu/.ssh/id_rsa.pub') }}"
                      state=present
 
    - name: Disable Password Authentication
