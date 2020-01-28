@@ -19,7 +19,7 @@
           content: "charles  ALL=(ALL)  NOPASSWD: ALL"
 
    - name: Deploy SSH Key
-     authorized_key: user=charles
+     authorized_key: user=ubuntu
                      key="{{ lookup('file', '/home/ubuntu/.ssh/id_rsa.pub') }}"
                      state=present
 
