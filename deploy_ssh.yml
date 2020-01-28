@@ -1,7 +1,7 @@
 ---
  - hosts: all
    vars:
-     - charles_password: '1234'
+     - charles_password: '$6$uSBiSbkRvCtXKZEF$4DmAT3I2xG9fZymRYvUgK1bQRwyTZB0GLkEfBVeqzUduKZWqYGGxUI2YsXlPG4k6k9ja8/q3iQwzATrxZLJWq1'
    gather_facts: no
    remote_user: root
 
