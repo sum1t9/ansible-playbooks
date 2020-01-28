@@ -2,7 +2,7 @@
  - hosts: all
    vars:
      - charles_password: '1234'
-  gather_facts: no
+   gather_facts: no
    remote_user: root
 
    tasks:
