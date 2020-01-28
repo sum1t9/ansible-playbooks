@@ -37,7 +37,7 @@
      lineinfile:
            dest=/etc/ssh/sshd_config
            regexp='^PermitRootLogin'
-           line="PermitRootLogin yes"
+           line="PermitRootLogin no"
            state=present
            backup=yes
      notify:
