@@ -3,6 +3,7 @@
    become: yes
    vars:
      - charles_password: '$6$uSBiSbkRvCtXKZEF$4DmAT3I2xG9fZymRYvUgK1bQRwyTZB0GLkEfBVeqzUduKZWqYGGxUI2YsXlPG4k6k9ja8/q3iQwzATrxZLJWq1'
+     - ssh_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8tW8TXrv2bArAOxi/Wgu3By8Fq+FtKR8yDdLj9kwinar2F+VZsHFj33I0i4CLULA/j99vpndWhK3s5j0eg6dOp5cNs9thG7Tjfup83goIynBVNPcVWxyVoMM4JWYTWikl39eEuLbjx85Mf08bK75oc0akrzqv35YC6J7JzzKFUOp2+9INXLu8WlKWaaiQjrIPMHSgfOClE4CBRHnqKML4FZVcrCdH3shpwXzFD/dDF6aJesAjWQN67Z/G2aMK63uVhhRjXn/prKtfeBxMH3Qjcq+pNS3lqJSPzLl6gDDrak/HAktfTCuOtx1Usl2KvpzDkvRw5y9zqdJCAiUhzcsd ubuntu@ip-172-31-9-104'
    gather_facts: no
    remote_user: root
 
@@ -20,7 +21,7 @@
 
    - name: Deploy SSH Key
      authorized_key: user=ubuntu
-                     key="{{ lookup('file', '/home/ubuntu/.ssh/id_rsa.pub') }}"
+                     key={{ssh_key}}
                      state=present
 
    - name: Disable Password Authentication
