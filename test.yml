@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   become: yes
+   tasks:
+     - name: Schedule a command to execute in 20 minutes as root
+       at:
+         command: diff /etc/passwd /home/ubuntu/com.txt > result.txt
+         count: 1
+         units: minutes
